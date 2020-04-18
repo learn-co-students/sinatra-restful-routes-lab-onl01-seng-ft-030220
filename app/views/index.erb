@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
+  </head>
+  <body id="page-top">
+    <h1>Welcome to the Recipe App</h1><br>
+    <form action="/recipes" method="POST">
+    <% @recipes.each do | recipe | %>
+      <% recipe_link = "/recipes/#{recipe.id}" %>
+      <p><a href="<%= recipe_link %>"><%= recipe.name %></a></p>
+      <% end %>
+    </form>
+  </body>
+</html>
