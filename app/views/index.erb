@@ -1,0 +1,15 @@
+<h1>Welcome to Lovely Recipes</h1>
+<h2>All you need to store your favorite recipes</h2>
+
+    <% @recipes.each_with_index do |recipe, index| %>
+      <div class="recipe">
+      <br>
+      <p><%= index + 1 %><p>
+      <a href="/recipes/<%= recipe.id %>"> This Recipe Page </a>
+    
+        <p>Recipe Name: <%= recipe.name %></p>
+        <p>Recipe Ingredients: <%= recipe.ingredients %></p>
+        <p>Recipe Cook Time: <%= recipe.cook_time  %></p>
+      </div><br>
+    <% end %>
+
